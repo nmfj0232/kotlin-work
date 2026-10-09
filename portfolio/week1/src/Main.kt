@@ -6,10 +6,10 @@ import kotlin.system.exitProcess
 
 fun main(args : Array<String>){
 
-    if(args.size != 3) {
-        println("Error : values for a, b, c required on command line")
-        exitProcess(1)
-    }
+if (args.size != 3) {
+    println("Error: values for a, b, c required on command line")
+    exitProcess(1)
+}
 
     val a = args[0].toDouble()
     val b = args[1].toDouble()
