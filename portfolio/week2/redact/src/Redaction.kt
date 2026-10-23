@@ -9,3 +9,4 @@
         val replacement = character.toString().repeat(redactedtext.length)
         return inputdocument.replace(redactedtext,replacement)
     }
+
