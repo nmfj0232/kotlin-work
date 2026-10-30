@@ -15,7 +15,7 @@ class ToDoListTest : FreeSpec({
     // Test fixture
 
     val pastDate = LocalDate(2026, 10, 4)
-    val futureDate = LocalDate(2026, 11, 6)
+    val futureDate = LocalDate(2026, 10, 6)
 
     val pastItem1 = ToDoItem(pastDate, ItemStatus.NotStarted, "Item 1")
     val pastItem2 = ToDoItem(pastDate, ItemStatus.Done, "Item 2")
@@ -30,8 +30,8 @@ class ToDoListTest : FreeSpec({
         tempFile.writer().use {
             it.write("2026-10-04: NotStarted: Item 1\n")
             it.write("2026-10-04: Done: Item 2\n")
-            it.write("2026-11-06: Done: Item 3\n")
-            it.write("2026-11-06: InProgress: Item 4\n")
+            it.write("2026-10-06: Done: Item 3\n")
+            it.write("2026-10-06: InProgress: Item 4\n")
         }
     }
 

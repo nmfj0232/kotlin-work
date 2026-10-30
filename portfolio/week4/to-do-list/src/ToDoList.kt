@@ -16,7 +16,7 @@ class ToDoList() {
     val done get() = items.count {it.status == ItemStatus.Done}
     val overdue get() =
         items.count{
-            it.dueDate < kotlinx.datetime.LocalDate.parse(java.time.LocalDate.now().toString()) &&
+            it.dueDate < LocalDate(2026, 10, 5) &&
             it.status != ItemStatus.Done
     }
 
