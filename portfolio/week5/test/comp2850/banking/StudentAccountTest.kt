@@ -40,6 +40,7 @@ class StudentAccountTest : FreeSpec({
         account.overdraft shouldBe 50
     }
 
+
     "Overdraft cannot be negative" {
         shouldThrow<IllegalArgumentException> {
             account.overdraft = -1
