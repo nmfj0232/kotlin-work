@@ -1,8 +1,8 @@
-package comp2850.banking
+import package comp2850.banking.BankAccount
 
 const val MAX_OVERDRAFT = 100
 
-class StudentAccount(holder: String, initialBalance: Int = 0, var initialOverdraft: Int = 0 )
+class StudentAccount(holder: String, initialBalance: Int = 0, initialOverdraft: Int = 0 )
     : BankAccount(holder, initialBalance) {
 
 
