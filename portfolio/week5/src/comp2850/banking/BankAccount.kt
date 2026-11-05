@@ -3,13 +3,13 @@
 
 package comp2850.banking
 
-abstract class BankAccount(val holder: String, initialBalance: Int = 0) {
+abstract class BankAccount(val holder: String) {
 
     init {
         require(holder.isNotBlank()) { "Account holder must not be blank" }
     }
 
-    var balance: Int = initialBalance
+    var balance = 0
         protected set(value) {
             field = value
         }
@@ -19,15 +19,9 @@ abstract class BankAccount(val holder: String, initialBalance: Int = 0) {
         balance += amount
     }
 
-    open fun withdraw(amount: Int) {
-        require(amount > 0) { "Withdrawal amount must be greater than 0" }
-
-        require(amount <= balance )
-        {"Insufficent funds"}
-
-        balance -= amount
+    abstract fun withdraw(amount: Int)
 
     }
 
-}
+
 

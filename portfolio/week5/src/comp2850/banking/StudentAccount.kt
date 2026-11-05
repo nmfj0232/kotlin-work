@@ -3,7 +3,7 @@ package comp2850.banking
 const val MAX_OVERDRAFT = 100
 
 class StudentAccount(holder: String, initialBalance: Int = 0, initialOverdraft: Int = 0 )
-    : BankAccount(holder, initialBalance) {
+    : BankAccount(holder) {
 
 
     var overdraft: Int = 0
@@ -15,8 +15,9 @@ class StudentAccount(holder: String, initialBalance: Int = 0, initialOverdraft: 
         }
 
     init{
+        balance = initialBalance
         overdraft = initialOverdraft
-    }
+        }
 
     override fun withdraw(amount:Int){
         require(amount > 0) {
@@ -35,6 +36,5 @@ class StudentAccount(holder: String, initialBalance: Int = 0, initialOverdraft: 
     override fun toString(): String{
         return "Account for $holder, balance = $balance (overdraft = $overdraft)"
     }
-
 }
 
