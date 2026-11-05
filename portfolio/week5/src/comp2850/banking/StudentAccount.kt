@@ -1,4 +1,4 @@
-import package comp2850.banking.BankAccount
+package comp2850.banking
 
 const val MAX_OVERDRAFT = 100
 

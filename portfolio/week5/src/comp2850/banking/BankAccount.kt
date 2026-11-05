@@ -3,9 +3,7 @@
 
 package comp2850.banking
 
-
-
-abstract class BankAccount(val holder: String, var initialBalance: Int = 0) {
+abstract class BankAccount(val holder: String, initialBalance: Int = 0) {
 
     init {
         require(holder.isNotBlank()) { "Account holder must not be blank" }
